@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head th:replace="~{shared :: head ('home')}">
+    <title>New Inventory</title>
+</head>
+
+<body>
+    <div class="container" th:object="${car}">
+        <div th:replace="~{shared :: navbar ('home')}"></div>
+        <div class="jumbotron col-9 mx-auto">
+            <h1 class="display-4">
+                <em>Detailed information</em>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img th:src="*{vehicle.url}" class="featuredCars image-fluid" alt="Pic of Car">
+            </div>
+            <div class="col-4">
+                <h5 class="display-5" th:text="*{vehicle.year} + ' ' + *{make.name} + ' ' + *{model.name}">
+                    Cars
+                    <br>
+                </h5>
+                <h6 th:text="'Mileage: ' + *{vehicle.mileage} + ' miles'">Miles</h6> <br>
+                <h6 th:text="'Body Style: ' + *{body.name}">Body</h6> <br>
+                <h6 th:text="'Interior: ' + *{interiorColor.name}">Interior</h6> <br>
+                <h6 th:text="'Exterior: ' + *{exteriorColor.name}">Exterior</h6> <br>
+            </div>
+            <div class="col-4">
+                <h5 class="display-5" th:text="'MSRP: $'+ *{vehicle.msrp}">Msrp</h5>
+                <h5 class="display-5" th:text="'Our Price: $' + *{vehicle.price}">Price</h5>
+                <hr id="line">
+                <h6 th:text="'Vin: ' + *{vehicle.vin}">vin</h6>
+                <h6 th:text="'Description: ' + *{vehicle.description}">description</h6>
+            </div>
+        </div>
+        <hr id="line">
+        <div class="row" id="newCarContainer">
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

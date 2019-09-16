@@ -1,0 +1,10 @@
+ajplarson\dealership\data\StateDaoTest.class
+ajplarson\dealership\data\ColorDaoTest.class
+ajplarson\dealership\data\RoleDaoTest.class
+ajplarson\dealership\data\ContactDaoTest.class
+ajplarson\dealership\data\VehicleDaoTest.class
+ajplarson\dealership\service\VehicleServiceTest.class
+ajplarson\dealership\data\ModelDaoTest.class
+ajplarson\dealership\data\BodyStyleDaoTest.class
+ajplarson\dealership\data\PurchaseTypeDaoTest.class
+ajplarson\dealership\data\MakeDaoTest.class
